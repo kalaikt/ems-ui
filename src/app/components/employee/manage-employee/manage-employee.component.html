@@ -1,0 +1,6 @@
+
+<div *ngIf="!editMode" class="d-grid d-md-flex justify-content-md-end mt-3 mr-5">
+    <button (click)="setMode()" class="btn btn-primary" type="button">Add Employee</button>
+</div>
+<ins-employee-list [employees]="employees" (delete)="deleteEmployee($event)" (edit)="updateEmployee($event)" *ngIf="!editMode"></ins-employee-list>
+<ins-employee-form (setMode)="setMode()" [empDetail]="selectedEmp" (save)="save($event)" *ngIf="editMode"></ins-employee-form>
