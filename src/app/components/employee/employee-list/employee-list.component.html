@@ -3,51 +3,53 @@
     <h2>Employee List</h2>
   </div>
 </div>
-
-<table class="table table-striped table-bordered">
-  <thead>
-    <tr>
-      <th>Employee Id</th>
-      <th>Dep Id</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Date Of Birth</th>
-      <th>Email</th>
-      <th>Mobile</th>
-      <th>Status</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let employee of employees">
-      <td>{{ employee.employeeId }}</td>
-      <td>{{ employee.depId }}</td>
-      <td>{{ employee.firstName }}</td>
-      <td>{{ employee.lastName }}</td>
-      <td>{{ employee.dateOfBirth }}</td>
-      <td>{{ employee.email }}</td>
-      <td>{{ employee.mobile }}</td>
-      <td>{{ employee.status }}</td>
-      
-      <td>
-        <button (click)="updateEmployee(employee)" class="btn btn-primary">
-          Update
-        </button>
-        <button
-          (click)="deleteEmployee(employee.employeeId)"
-          class="btn btn-danger"
-          style="margin-left: 10px"
-        >
-          Delete
-        </button>
-        <button
-          (click)="employeeDetails()"
-          class="btn btn-primary"
-          style="margin-left: 10px"
-        >
-          View
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-xl-12">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Employee Id</th>
+          <th>Dep Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Date Of Birth</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.employeeId }}</td>
+          <td>{{ employee.depId }}</td>
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+          <td>{{ employee.dateOfBirth }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.mobile }}</td>
+          <td>{{ employee.status }}</td>
+          <td>
+            <button (click)="updateEmployee(employee)" class="btn btn-primary">
+              Update
+            </button>
+            <button
+              (click)="deleteEmployee(employee.employeeId)"
+              class="btn btn-danger"
+              style="margin-left: 10px"
+            >
+              Delete
+            </button>
+            <button
+              (click)="employeeDetails()"
+              class="btn btn-primary"
+              style="margin-left: 10px"
+            >
+              View
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
