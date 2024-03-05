@@ -6,7 +6,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './employee.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EmployeeService } from '../shared/employee.service';
+import { EmployeeService } from '../../services/employee.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

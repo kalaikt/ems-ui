@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Employee } from '../employee.modal';
-import { EmployeeService } from '../../shared/employee.service';
+import { Employee } from '../../../models/employee.modal';
+import { EmployeeService } from '../../../services/employee.service';
 
 @Component({
   selector: 'app-manage-employee',
@@ -24,7 +24,7 @@ export class ManageEmployeeComponent {
 
   private getEmployees() {
     this.empService.getEmployeesList().subscribe((data) => {
-      this.employees = data;
+      this.employees = data.data;
     });
   }
 

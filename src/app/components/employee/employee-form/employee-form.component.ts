@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Employee } from '../employee.modal';
+import { Employee } from '../../../models/employee.modal';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
