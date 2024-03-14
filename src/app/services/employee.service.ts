@@ -44,4 +44,10 @@ export class EmployeeService {
       `${this.env.basePath}/${this.env.endpoint.employee}/${id}`
     );
   }
+  
+  searchEmployee(search: string): Observable<ResponseBody<Employee[]>> {
+    return this.httpClient.get<ResponseBody<Employee[]>>(
+      `${this.env.basePath}/${this.env.endpoint.employee}?search=${search}`
+    );
+  }
 }

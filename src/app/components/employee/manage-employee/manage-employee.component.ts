@@ -44,4 +44,10 @@ export class ManageEmployeeComponent {
       this.setMode();
     });
   }
+  update(emp: Employee) {
+    if (emp.employeeId)
+      this.empService.updateEmployee(emp.employeeId, emp).subscribe((d) => {
+        this.setMode();
+      });
+  }
 }
